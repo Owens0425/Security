@@ -38,3 +38,7 @@
 - Firefox 127.0.0.1:1111
 # Authenticate to 28.100 ip
 - ssh -MS /tmp/t1 user@127.0.0.1 -p 1112
+
+# Ping Sweep
+      64 bytes from 192.168.150.225: icmp_seq=1 ttl=64 time=7.88 ms
+      64 bytes from 192.168.150.227: icmp_seq=1 ttl=63 time=6.28 ms
