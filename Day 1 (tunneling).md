@@ -3,6 +3,7 @@
 
 # Ping Sweep if nmap is not available
 - for i in {97..126}; do (ping -c 1 192.168.28.$i | grep "bytes from" &); done
+
       64 bytes from 192.168.28.100: icmp_seq=1 ttl=63 time=1.81 ms
   
       64 bytes from 192.168.28.99: icmp_seq=1 ttl=63 time=1.42 ms
@@ -16,6 +17,7 @@
       64 bytes from 192.168.28.111: icmp_seq=1 ttl=63 time=0.596 ms
   
       64 bytes from 192.168.28.120: icmp_seq=1 ttl=63 time=1.61 ms
+
 # Proxychains through jump box
 - ssh -S /tmp/jump jump -O forward -D 9050
 # Nmap Results
@@ -26,6 +28,40 @@
         80/tcp   open  http
   
         2222/tcp open  EtherNetIP-1
+- Proxychains nmap 192.168.28.99
+
+        PORT   STATE SERVICE
+  
+        53/tcp open  domain
+- Proxychains nmap 192.168.28.105
+
+        PORT     STATE SERVICE
+  
+        21/tcp   open  ftp
+  
+        23/tcp   open  telnet
+  
+        2222/tcp open  EtherNetIP-1
+- Proxychains nmap 192.168.28.97
+  
+- Proxychains nmap 192.168.28.98
+
+         PORT   STATE SERVICE
+  
+        53/tcp open  domain
+- Proxychains nmap 192.168.28.111
+
+        PORT     STATE SERVICE
+  
+        80/tcp   open  http
+  
+        2222/tcp open  EtherNetIP-1
+  
+        8080/tcp open  http-proxy
+- Proxychains nmap 192.168.28.120
+        PORT     STATE SERVICE
+  
+        4242/tcp open  vrml-multi-use
 # Port Interrogation (Banner Grabbing)
 - proxychains nc 192.168.28.100 80,2222
 
@@ -39,6 +75,6 @@
 # Authenticate to 28.100 ip
 - ssh -MS /tmp/t1 user@127.0.0.1 -p 1112
 
-# Ping Sweep
+# Ping Sweep for other network
       64 bytes from 192.168.150.225: icmp_seq=1 ttl=64 time=7.88 ms
       64 bytes from 192.168.150.227: icmp_seq=1 ttl=63 time=6.28 ms
