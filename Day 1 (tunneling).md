@@ -1,21 +1,29 @@
 # Access Jump Box Command
-    ssh -MS /tmp/jump student@10.50.22.149
+- ssh -MS /tmp/jump student@10.50.22.149
 
 # Ping Sweep if nmap is not available
-    for i in {97..126}; do (ping -c 1 192.168.28.$i | grep "bytes from" &); done
-        64 bytes from 192.168.28.100: icmp_seq=1 ttl=63 time=1.81 ms
-        64 bytes from 192.168.28.99: icmp_seq=1 ttl=63 time=1.42 ms
-        64 bytes from 192.168.28.105: icmp_seq=1 ttl=63 time=2.47 ms
-        64 bytes from 192.168.28.97: icmp_seq=1 ttl=64 time=0.212 ms
-        64 bytes from 192.168.28.98: icmp_seq=1 ttl=63 time=3.77 ms
-        64 bytes from 192.168.28.111: icmp_seq=1 ttl=63 time=0.596 ms
-        64 bytes from 192.168.28.120: icmp_seq=1 ttl=63 time=1.61 ms
+- for i in {97..126}; do (ping -c 1 192.168.28.$i | grep "bytes from" &); done
+      64 bytes from 192.168.28.100: icmp_seq=1 ttl=63 time=1.81 ms
+  
+      64 bytes from 192.168.28.99: icmp_seq=1 ttl=63 time=1.42 ms
+  
+      64 bytes from 192.168.28.105: icmp_seq=1 ttl=63 time=2.47 ms
+  
+      64 bytes from 192.168.28.97: icmp_seq=1 ttl=64 time=0.212 ms
+  
+      64 bytes from 192.168.28.98: icmp_seq=1 ttl=63 time=3.77 ms
+  
+      64 bytes from 192.168.28.111: icmp_seq=1 ttl=63 time=0.596 ms
+  
+      64 bytes from 192.168.28.120: icmp_seq=1 ttl=63 time=1.61 ms
 # Proxychains through jump box
-    ssh -S /tmp/jump jump -O forward -D 9050
+- ssh -S /tmp/jump jump -O forward -D 9050
 # Nmap Results
-    Proxychains nmap 192.168.28.100
+- Proxychains nmap 192.168.28.100
         PORT     STATE SERVICE
+  
         80/tcp   open  http
+  
         2222/tcp open  EtherNetIP-1
 # Port Interrogation (Banner Grabbing)
     proxychains nc 192.168.28.100 80,2222
