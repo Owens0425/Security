@@ -20,18 +20,21 @@
 - ssh -S /tmp/jump jump -O forward -D 9050
 # Nmap Results
 - Proxychains nmap 192.168.28.100
+
         PORT     STATE SERVICE
   
         80/tcp   open  http
   
         2222/tcp open  EtherNetIP-1
 # Port Interrogation (Banner Grabbing)
-    proxychains nc 192.168.28.100 80,2222
-        HTTP is Returned
-        2222 is a possible ssh port
+- proxychains nc 192.168.28.100 80,2222
+
+            HTTP is Returned
+  
+            2222 is a possible ssh port
 # Port Forward to found Ports
-     ssh -S/tmp/jump jump -O forward -L1111:192.168.28.100:80 -L1112:192.168.28.100:2222
+- ssh -S/tmp/jump jump -O forward -L1111:192.168.28.100:80 -L1112:192.168.28.100:2222
 # Open Web Server
-     Firefox 127.0.0.1:1111
+- Firefox 127.0.0.1:1111
 # Authenticate to 28.100 ip
-     ssh -MS /tmp/t1 user@127.0.0.1 -p 1112
+- ssh -MS /tmp/t1 user@127.0.0.1 -p 1112
