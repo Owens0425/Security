@@ -54,4 +54,16 @@
 - ssh "public Key" >> var/www/ .ssh/authroized_keys
 # CTF
 
-- 
+- --script nmap http
+
+- /robots.txt
+
+  - dissallow /net_test
+
+- /css
+
+- /images
+
+- uploads
+
+  
