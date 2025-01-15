@@ -52,3 +52,6 @@
 - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/9aktlN9GzIIUWJGEVAClDU5v7AM4M8MbT5ETYTjlnG8Lte+2V11I5dnksfLZcNcYhUF7ai0eD4/xtn3lm8QOK+6nLd1mCoh9OKnB7U9ulN4YQdSPkTYBoACMHGeu4rp73W5u1yBDK8fdLsX5f7ZumcRvqGYGDDHF9SdShDWCVRo9rt7hicLo/MyYCRDnM+VTUtvCtQm4VfyAnlSyoDlPy26WTR9cADKOblJ2OFmD/VbsKZaRZAghoqNJjLGPL1dbXNTVVgJwo3cExkDrnOopUmUPqFPmnU2cNMEtF/Wp+donsEFhxfnSI0jl7pD8tiO4j2vKnrCoEJ0nDOnreZVV student@lin-ops
 
 - ssh "public Key" >> var/www/ .ssh/authroized_keys
+# CTF
+
+- 
