@@ -17,8 +17,8 @@
 - Robots.txt: list off different directorys contained in web server
 # Cross-Site Scripting (XSS) Overview
 - Allows us to arbitaurily place code on a webpage
--
-- <script>alert('XSS');</script>
+
+- <script>alert('XSS');</script> = tells us if a site is vulnerble to XSS
 
 # Reflected XSS
 
