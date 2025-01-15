@@ -36,4 +36,7 @@
 - Site alows unsanitized file uploads
 
 - Does not check extension, Allows for code execution
+# Demo 
 
+- Script
+  - Script http-enum.nse (run when a http port is open {80})
