@@ -1,0 +1,1 @@
+- Script http-enum.nse (run when a http port is open {80})
