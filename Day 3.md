@@ -1,1 +1,11 @@
-- Script http-enum.nse (run when a http port is open {80})
+# SQL
+
+- Structured Query Language
+
+- All data is relational: 
+
+- Two main commands
+  - Standard
+  - Union
+
+- 
